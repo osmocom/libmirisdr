@@ -788,7 +788,7 @@ static void LIBUSB_CALL _libusb_callback(struct libusb_transfer *xfer)
 		}
 	}
 
-	if (dev->cb)
+	if (dev->cb && total_len > 0)
 		dev->cb((uint8_t*)outsamples, total_len * sizeof(int16_t), dev->cb_ctx);
 
 	/* resubmit transfer */
