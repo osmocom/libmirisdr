@@ -7,7 +7,7 @@ AM_CFLAGS = ${CFLAGS} -fPIC ${SYMBOL_VISIBILITY}
 
 lib_LTLIBRARIES = libmirisdr.la
 
-libmirisdr_la_SOURCES = libmirisdr.c
+libmirisdr_la_SOURCES = libmirisdr.c tuner_msi001.c
 libmirisdr_la_LDFLAGS = -version-info $(LIBVERSION)
 
 bin_PROGRAMS         = miri_sdr
